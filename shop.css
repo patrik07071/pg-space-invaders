@@ -1,0 +1,51 @@
+.overlayShopContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.shop-item {
+  position: relative;
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: calc(33% - 25px);
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s ease;
+  & p {
+    margin: 5px 0;
+  }
+  & button {
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 60px;
+    height: 30px;
+  }
+  & .item-description {
+    max-height: 0;
+    overflow: hidden;
+    color: white;
+    font-size: 0.8em;
+    transition: max-height 0.3s ease;
+  }
+  &:hover .item-description {
+    max-height: 100px;
+  }
+}
+.popup {
+  position: absolute;
+  width: 75px;
+  padding: 10px;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+}

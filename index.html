@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Space Invaders</title>
+    <link rel="icon" type="image/x-icon" href="./img/space-invaders.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./js/three.module.js",
+          "three/addons/": "./js/three-addons/"
+        }
+      }
+    </script>
+    <script type="module" src="./js/Game.js"></script>
+  </head>
+  <body>
+    <div id="mainMenu">
+      <div id="buttonContainer">
+        <button id="continueButton" class="menuButton">Continue</button>
+        <button id="startButton" class="menuButton">Start</button>
+      </div>
+    </div>
+
+    <div id="newGameConfirmationOverlay" class="Overlay">
+      <div class="overlayMenu">
+        <p>Saved game exists. Are you sure you want to start a new game ?</p>
+        <button id="confirmNewGame" class="menuButton">Continue</button>
+        <button id="cancelNewGame" class="menuButton">Cancel</button>
+      </div>
+    </div>
+
+    <div id="pauseMenuOverlay" class="Overlay">
+      <div class="overlayMenu">
+        <p>Game Paused</p>
+        <button id="resumeGame" class="menuButton">Continue</button>
+        <button id="pauseGoToMainMenu" class="menuButton">Menu</button>
+      </div>
+    </div>
+
+    <div id="gameOverOverlay" class="Overlay">
+      <div class="overlayMenu">
+        <p>Game Over</p>
+        <button id="resetGame" class="menuButton">Restart</button>
+        <button id="goToMainMenu" class="menuButton">Menu</button>
+      </div>
+    </div>
+
+    <div id="gameShopOverlay" class="Overlay">
+      <div class="overlayMenu">
+        <h3>Shop</h3>
+        <div id="popupMessage" class="popup">Item bought</div>
+        <div class="overlayShopContent"></div>
+        <button id="closeShop" class="menuButton">Close</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -116,7 +116,7 @@ export class Shop {
     itemContainer.appendChild(itemName);
 
     const itemPrice = document.createElement("p");
-    itemPrice.textContent = `Cena: ${shopItem.cost}`;
+    itemPrice.textContent = `Cost: ${shopItem.cost}`;
     itemContainer.appendChild(itemPrice);
 
     const buyButton = document.createElement("button");

@@ -39,12 +39,13 @@ export class Spaceship {
    */
   createSpaceship() {
     this.loader.load(
-      "../models/Spaceship.glb",
+      "../models/spaceship.glb",
       (gltf) => {
         const model = gltf.scene;
-        model.scale.set(0.003, 0.003, 0.003);
+        model.scale.set(0.3, 0.3, 0.3);
         model.position.set(0, 0, 0);
-        model.rotation.set(0, Math.PI, 0.3);
+        // model.rotation.set(0, Math.PI, 0.3);
+        model.rotation.set(0, 0, 0);
         this.scene.add(model);
         this.object = model;
       },

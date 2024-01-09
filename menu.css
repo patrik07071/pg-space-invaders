@@ -70,3 +70,11 @@
     color: White;
   }
 }
+
+#authors{
+  color: white;
+  position: fixed;
+  top: 95%;
+  text-align: center;
+  width: 100%;
+}
